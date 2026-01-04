@@ -356,7 +356,7 @@
             grid-template-columns: 1fr;
             gap: 4rem;
             align-items: center;
-            max-width: 800px;
+            max-width: 1100px;
         }
         
         .contact-person-left {
@@ -390,7 +390,9 @@
         .contact-details {
             display: flex;
             flex-direction: row;
-            gap: 2rem;
+            flex-wrap: nowrap;
+            gap: 1.5rem;
+            justify-content: center;
         }
 
         .contact-item {
@@ -398,10 +400,11 @@
             align-items: center;
             gap: 1rem;
             font-size: 1.1rem;
-            padding: 1rem;
+            padding: 1.25rem 2rem;
             border-radius: 10px;
             background: var(--ultra-light);
             transition: all 0.3s;
+            flex: 0 1 auto;
         }
         
         .contact-item:hover {
@@ -412,6 +415,13 @@
         .contact-icon {
             font-size: 1.5rem;
             min-width: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-icon img {
+            display: block;
         }
 
         .contact-item a {
@@ -420,6 +430,7 @@
             transition: color 0.3s;
             font-weight: 600;
             font-size: 1.15rem;
+            white-space: nowrap;
         }
 
         .contact-item a:hover {
@@ -538,6 +549,10 @@
                 text-align: center;
             }
 
+            .contact-details {
+                flex-wrap: wrap;
+            }
+
             footer .container {
                 grid-template-columns: 1fr;
             }
@@ -606,7 +621,7 @@
                     </div>
                     <h3>Správa počítačové sítě</h3>
                     <p>Komplexní správa a údržba podnikové počítačové sítě od počítačů po servery.</p>
-                    <a href="#kontakt" class="service-button">Více informací</a>
+                    <a href="#kontakt" class="service-button">Mám zájem</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -614,7 +629,7 @@
                     </div>
                     <h3>Konzultace</h3>
                     <p>Pomoc s výběrem vhodného řešení pro individuální potřeby klienta.</p>
-                    <a href="#kontakt" class="service-button">Více informací</a>
+                    <a href="#kontakt" class="service-button">Mám zájem</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -622,7 +637,7 @@
                     </div>
                     <h3>Docházka a přístup</h3>
                     <p>Kompletní přehled nad přístupem a docházkou zaměstnanců pro malé i velké.</p>
-                    <a href="#kontakt" class="service-button">Více informací</a>
+                    <a href="#kontakt" class="service-button">Mám zájem</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -630,7 +645,7 @@
                     </div>
                     <h3>Optimalizace</h3>
                     <p>Kontrola a optimalizace nastavení sítě a zabezpečení.</p>
-                    <a href="#kontakt" class="service-button">Více informací</a>
+                    <a href="#kontakt" class="service-button">Mám zájem</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -638,7 +653,7 @@
                     </div>
                     <h3>Servis</h3>
                     <p>Mimozáruční servis, údržba a opravy výpočetní techniky.</p>
-                    <a href="#kontakt" class="service-button">Více informací</a>
+                    <a href="#kontakt" class="service-button">Mám zájem</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -646,7 +661,7 @@
                     </div>
                     <h3>Obchod</h3>
                     <p>Prodej výpočetní techniky, elektrotechniky a spotřebního materiálu.</p>
-                    <a href="#kontakt" class="service-button">Více informací</a>
+                    <a href="#kontakt" class="service-button">Mám zájem</a>
                 </div>
             </div>
         </div>
@@ -690,6 +705,10 @@
                         <div class="contact-item">
                             <span class="contact-icon">✉️</span>
                             <a href="mailto:info@crossit.cz">info@crossit.cz</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><img src="TV_logo_new.svg" alt="TeamViewer" style="width: 2rem; height: 2rem;"></span>
+                            <a href="https://get.teamviewer.com/crossitqs" target="_blank">Stáhnout TeamViewer</a>
                         </div>
                     </div>
                 </div>
