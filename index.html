@@ -523,12 +523,26 @@
                 padding: 0.5rem 2rem;
             }
 
+            .hero {
+                min-height: 60vh;
+                padding: 3rem 1.5rem;
+            }
+
             .hero-content h1 {
                 font-size: 2.2rem;
             }
 
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+
             .services-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .client-card {
+                padding: 2rem 1.5rem;
             }
 
             .clients-grid {
@@ -543,6 +557,7 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
                 text-align: center;
+                padding: 2rem;
             }
             
             .contact-person-left {
@@ -550,7 +565,21 @@
             }
 
             .contact-details {
-                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .contact-item {
+                width: 100%;
+            }
+
+            .contact-item {
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .contact-item a {
+                font-size: 1rem;
             }
 
             footer .container {
@@ -563,12 +592,38 @@
                 height: 40px;
             }
 
+            .hero {
+                min-height: 50vh;
+                padding: 2rem 1rem;
+            }
+
             .hero-content h1 {
                 font-size: 1.8rem;
             }
 
             .hero-content p {
                 font-size: 1rem;
+            }
+
+            .service-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .client-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .contact-person {
+                padding: 1.5rem;
+            }
+
+            .contact-item {
+                padding: 0.875rem 1.25rem;
+                font-size: 0.95rem;
+            }
+
+            .contact-item a {
+                font-size: 0.95rem;
             }
 
             .section-title {
@@ -750,5 +805,23 @@
     </footer>
     <div class="footer-bottom">
     </div>
+
+    <script>
+        // Hamburger menu functionality
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
