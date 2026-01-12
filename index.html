@@ -265,8 +265,9 @@
 
         .service-button {
             display: inline-block;
-            background: var(--medium-gray);
-            color: var(--white);
+            background: var(--white);
+            color: var(--primary-red);
+            border: 2px solid var(--primary-red);
             padding: 0.8rem 2rem;
             text-decoration: none;
             font-weight: 600;
@@ -278,9 +279,29 @@
         }
 
         .service-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(74,74,74,0.3);
+            background: var(--primary-red);
+            color: var(--white);
         }
+
+        /* Sloupec 1 (karty 1, 4): Všechny efekty - transform + shadow */
+        .service-card:nth-child(1) .service-button:hover,
+        .service-card:nth-child(4) .service-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+        }
+
+        /* Sloupec 2 (karty 2, 5): Bez transform - jen shadow */
+        .service-card:nth-child(2) .service-button:hover,
+        .service-card:nth-child(5) .service-button:hover {
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+        }
+
+        /* Sloupec 3 (karty 3, 6): Bez shadow - jen transform */
+        .service-card:nth-child(3) .service-button:hover,
+        .service-card:nth-child(6) .service-button:hover {
+            transform: translateY(-2px);
+        }
+
 
         /* Clients Section */
         .clients {
@@ -341,7 +362,7 @@
         }
 
         .contact .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -449,7 +470,7 @@
         }
 
         footer .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -795,7 +816,7 @@
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span>
-                            <a href="/cdn-cgi/l/email-protection#d6bfb8b0b996b5a4b9a5a5bfa2f8b5ac"><span class="__cf_email__" data-cfemail="b1d8dfd7def1d2c3dec2c2d8c59fd2cb">[email&#160;protected]</span></a>
+                            <a href="mailto:info@crossit.cz">info@crossit.cz</a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon"><img src="TV_logo_new.svg" alt="TeamViewer" style="width: 2rem; height: 2rem;"></span>
@@ -815,7 +836,7 @@
                 <ul>
                     <li>Ringhofferova 115/1</li>
                     <li>155 21, Praha 5 - Třebonice</li>
-                    <li><a href="/cdn-cgi/l/email-protection#157c7b737a5576677a66667c613b766f"><span class="__cf_email__" data-cfemail="e881868e87a88b9a879b9b819cc68b92">[email&#160;protected]</span></a></li>
+                    <li><a href="mailto:info@crossit.cz">info@crossit.cz</a></li>
                     <li><a href="tel:+420271779950">+420 271 779 950</a></li>
                 </ul>
             </div>
@@ -835,13 +856,21 @@
         <p class="">CROSS IT SOLUTIONS, s.r.o. — váš partner pro správu IT, bezpečnost a podporu uživatelů. <br> © 2026 Všechna práva vyhrazena.</p>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Hamburger menu functionality
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('nav ul');
 
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+        });
+
+        // Zavřít menu po kliknutí na odkaz
+        const menuLinks = document.querySelectorAll('nav ul li a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
         });
     </script>
 </body>
