@@ -829,7 +829,7 @@
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span>
-                            <a href="/cdn-cgi/l/email-protection#4e272028210e2d3c213d3d273a602d34"><span class="__cf_email__" data-cfemail="8ae3e4ece5cae9f8e5f9f9e3fea4e9f0">[email&#160;protected]</span></a>
+                            <a href="mailto:info@crossit.cz">info@crossit.cz</a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon"><img src="TV_logo_new.svg" alt="TeamViewer" style="width: 2rem; height: 2rem;"></span>
@@ -849,7 +849,7 @@
                 <ul>
                     <li>Ringhofferova 115/1</li>
                     <li>155 21, Praha 5 - Třebonice</li>
-                    <li><a href="/cdn-cgi/l/email-protection#e1888f878ea182938e92928895cf829b"><span class="__cf_email__" data-cfemail="573e3931381734253824243e2379342d">[email&#160;protected]</span></a></li>
+                    <li><a href="mailto:info@crossit.cz">info@crossit.cz</a></li>
                     <li><a href="tel:+420271779950">+420 271 779 950</a></li>
                 </ul>
             </div>
@@ -869,10 +869,25 @@
         <p class="">CROSS IT SOLUTIONS, s.r.o. — váš partner pro správu IT, bezpečnost a podporu uživatelů. <br> © 2026 Všechna práva vyhrazena.</p>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+    <script>
         // Hamburger menu functionality
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('nav ul');
 
         menuToggle.addEventListener('click', () => {
-            navMen
+            navMenu.classList.toggle('active');
+        });
+
+        // Zavřít menu po kliknutí na odkaz
+        const menuLinks = document.querySelectorAll('nav ul li a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+       
