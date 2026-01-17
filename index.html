@@ -696,164 +696,187 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            /* Upravení scroll offsetu pro menší logo */
+            .hero,
+            .services,
+            .clients,
+            .contact {
+                scroll-margin-top: 75px;
+            }
         }
 
-/* Optimalizace pro mobily v landscape režimu */
-@media (max-height: 500px) and (orientation: landscape) {
-    /* Zmenšení nav baru */
-    nav .container {
-        padding: 0.5rem 1rem;
-    }
-    
-    .logo img {
-        height: 35px;
-    }
-    
-    /* Hamburger menu menší */
-    .menu-toggle {
-        width: 28px;
-        height: 22px;
-    }
-    
-    .menu-toggle span {
-        height: 2px;
-    }
-    
-    /* Menu optimalizace */
-    nav ul {
-        max-height: calc(100vh - 60px); /* Výška obrazovky mínus nav bar */
-        overflow-y: auto; /* Scrollování */
-        padding: 0.5rem 0;
-    }
-    
-    nav ul li {
-        padding: 0.4rem 1.5rem;
-    }
-    
-    nav ul li a {
-        font-size: 0.9rem;
-        padding: 0.3rem 0;
-    }
-    
-    /* Hero sekce */
-    .hero {
-        min-height: auto;
-        padding: 2rem 1rem;
-    }
-    
-    .hero-content h1 {
-        font-size: 1.6rem;
-        margin-bottom: 0.8rem;
-    }
-    
-    .hero-content p {
-        font-size: 0.95rem;
-        margin-bottom: 1rem;
-    }
-    
-    .cta-button {
-        padding: 0.6rem 1.5rem;
-        font-size: 0.9rem;
-    }
-    
-    /* Section titly a spacing */
-    .section-title {
-        font-size: 1.6rem;
-        margin-bottom: 0.8rem;
-    }
-    
-    .section-subtitle {
-        font-size: 0.95rem;
-        margin-bottom: 2rem;
-    }
-    
-    /* Služby */
-    section {
-        padding: 3rem 1rem;
-    }
-    
-    .service-card {
-        padding: 1.5rem 1rem;
-    }
-    
-    .service-icon svg {
-        width: 3rem;
-        height: 3rem;
-    }
-    
-    .service-card h3 {
-        font-size: 1.1rem;
-    }
-    
-    .service-card p {
-        font-size: 0.9rem;
-    }
-    
-    /* Client cards */
-    .client-card {
-        padding: 1.5rem 1rem;
-    }
-    
-    /* Contact sekce */
-    .contact-person {
-        padding: 1.5rem;
-    }
-    
-    .contact-item {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-    }
-    
-    /* Footer */
-    footer {
-        padding: 2rem 1rem;
-    }
-    
-    footer h4 {
-        font-size: 1rem;
-    }
-    
-    footer li {
-        font-size: 0.85rem;
-    }
-}
+        /* Optimalizace pro mobily v landscape režimu */
+        @media (max-height: 500px) and (orientation: landscape) {
+            /* Zmenšení nav baru */
+            nav .container {
+                padding: 0.5rem 1rem;
+            }
+            
+            .logo img {
+                height: 35px;
+            }
+            
+            /* Hamburger menu menší */
+            .menu-toggle {
+                width: 28px;
+                height: 22px;
+            }
+            
+            .menu-toggle span {
+                height: 2px;
+            }
+            
+            /* Menu optimalizace */
+            nav ul {
+                max-height: calc(100vh - 60px); /* Výška obrazovky mínus nav bar */
+                overflow-y: auto; /* Scrollování */
+                padding: 0.5rem 0;
+            }
+            
+            nav ul li {
+                padding: 0.4rem 1.5rem;
+            }
+            
+            nav ul li a {
+                font-size: 0.9rem;
+                padding: 0.3rem 0;
+            }
+            
+            /* Hero sekce */
+            .hero {
+                min-height: auto;
+                padding: 2rem 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.6rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .hero-content p {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+            
+            .cta-button {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            /* Section titly a spacing */
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+            }
+            
+            /* Služby */
+            section {
+                padding: 3rem 1rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem 1rem;
+            }
+            
+            .service-icon svg {
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.1rem;
+            }
+            
+            .service-card p {
+                font-size: 0.9rem;
+            }
+            
+            /* Client cards */
+            .client-card {
+                padding: 1.5rem 1rem;
+            }
+            
+            /* Contact sekce */
+            .contact-person {
+                padding: 1.5rem;
+            }
+            
+            .contact-item {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            /* Footer */
+            footer {
+                padding: 2rem 1rem;
+            }
+            
+            footer h4 {
+                font-size: 1rem;
+            }
+            
+            footer li {
+                font-size: 0.85rem;
+            }
 
-/* Extra optimalizace pro velmi malé landscape (telefony <400px na výšku) */
-@media (max-height: 400px) and (orientation: landscape) {
-    nav .container {
-        padding: 0.4rem 0.8rem;
-    }
-    
-    .logo img {
-        height: 30px;
-    }
-    
-    .menu-toggle {
-        width: 25px;
-        height: 20px;
-    }
-    
-    nav ul {
-        max-height: calc(100vh - 50px);
-    }
-    
-    nav ul li {
-        padding: 0.3rem 1rem;
-    }
-    
-    nav ul li a {
-        font-size: 0.85rem;
-    }
-    
-    .hero-content h1 {
-        font-size: 1.4rem;
-    }
-    
-    section {
-        padding: 2rem 1rem;
-    }
-}
+            /* Scroll offset pro landscape - nižší nav bar */
+            .hero,
+            .services,
+            .clients,
+            .contact {
+                scroll-margin-top: 55px;
+            }
+        }
 
+        /* Extra optimalizace pro velmi malé landscape (telefony <400px na výšku) */
+        @media (max-height: 400px) and (orientation: landscape) {
+            nav .container {
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .logo img {
+                height: 30px;
+            }
+            
+            .menu-toggle {
+                width: 25px;
+                height: 20px;
+            }
+            
+            nav ul {
+                max-height: calc(100vh - 50px);
+            }
+            
+            nav ul li {
+                padding: 0.3rem 1rem;
+            }
+            
+            nav ul li a {
+                font-size: 0.85rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.4rem;
+            }
+            
+            section {
+                padding: 2rem 1rem;
+            }
+
+            /* Scroll offset pro velmi malý landscape */
+            .hero,
+            .services,
+            .clients,
+            .contact {
+                scroll-margin-top: 48px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1026,7 +1049,7 @@
         <p class="">CROSS IT SOLUTIONS, s.r.o. — váš partner pro správu IT, bezpečnost a podporu uživatelů. <br> © 2026 Všechna práva vyhrazena.</p>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
     <script>
         // Hamburger menu functionality
